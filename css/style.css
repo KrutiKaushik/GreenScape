@@ -372,7 +372,7 @@ input[type="checkbox"]:checked ~ .checkbox-content {
   
  
   #page1 {
-      background-image: url('/images/R.jpg');
+    background-image: url("/R.jpg"); 
     background-size: cover;
     background-position: center;
     color: white;
