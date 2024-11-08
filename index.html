@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Landscaping Services</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+</head>
+<body>
+
+  
+<header class="topbar">
+    <div class="nav-container">
+        <div class="logo">
+            <h1>GreenScape </h1>
+        </div>
+        
+        <div class="hamburger" id="hamburger-menu">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+
+        <nav class="nav-links" id="nav-links">
+            <ul>
+                <li><a href="#page1" class="nav-item">Home</a></li>
+                <li><a href="#page2" class="nav-item">Services</a></li>
+                <li><a href="#page3" class="nav-item">Gallery</a></li>
+                <li><a href="#contact" class="nav-item">Contact</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+  
+  <section id="page1" class="maincontent" data-aos="fade-up">
+    <div class="box1">
+      <h2>Welcome to GreenScape </h2>
+      <p>Transforming your outdoor space into a beautiful, functional area.</p>
+      <a href="#page2" class="btn">Explore Services</a>
+    </div>
+  </section>
+
+
+<section id="page2" class="maincontent" data-aos="fade-right">
+    <div class="leftcontent">
+        <h2>Project Cost Estimator</h2>
+        <form id="cost-estimator-form">
+            <div class="form-group">
+                <label for="yard-size">Yard Size (sq ft):</label>
+                <input type="number" id="yard-size" placeholder="Enter yard size" required>
+            </div>
+
+            <div class="design-options">
+                <h3>Design Type:</h3>
+                <div class="radio-group">
+                    <label class="radio-label">
+                        <input type="radio" name="design-type" value="basic" checked>
+                        <span class="radio-custom"></span>
+                        <div class="radio-content">
+                            <h4>Basic</h4>
+                            <p>Simple design with essential features</p>
+                        </div>
+                    </label>
+
+                    <label class="radio-label">
+                        <input type="radio" name="design-type" value="premium">
+                        <span class="radio-custom"></span>
+                        <div class="radio-content">
+                            <h4>Premium</h4>
+                            <p>Advanced design with premium features</p>
+                        </div>
+                    </label>
+
+                    <label class="radio-label">
+                        <input type="radio" name="design-type" value="luxury">
+                        <span class="radio-custom"></span>
+                        <div class="radio-content">
+                            <h4>Luxury</h4>
+                            <p>High-end design with exclusive features</p>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <div class="extras-options">
+                <h3>Additional Features:</h3>
+                <div class="checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="extras" value="lighting">
+                        <span class="checkbox-custom"></span>
+                        <div class="checkbox-content">
+                            <h4>Lighting</h4>
+                            <p>$2,000</p>
+                        </div>
+                    </label>
+
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="extras" value="irrigation">
+                        <span class="checkbox-custom"></span>
+                        <div class="checkbox-content">
+                            <h4>Irrigation</h4>
+                            <p>$3,000</p>
+                        </div>
+                    </label>
+
+                    <label class="checkbox-label">
+                        <input type="checkbox" name="extras" value="pathway">
+                        <span class="checkbox-custom"></span>
+                        <div class="checkbox-content">
+                            <h4>Pathway</h4>
+                            <p>$1,500</p>
+                        </div>
+                    </label>
+                </div>
+            </div>
+
+            <button type="button" onclick="calculateCost()">Calculate Estimate</button>
+        </form>
+    </div>
+</section>
+
+  <!-- Gallery Section -->
+  <section id="page3" class="maincontent" data-aos="fade-left">
+    <h2>Our Work Gallery</h2>
+    <div class="gallery">
+      <div class="box1"><img src="/images/1.jpg " alt="Project 1"></div>
+      <div class="box2"><img src="/images/2.jpg" alt="Project 2"></div>
+      <div class="box1"><img src="/images/3.jpg" alt="Project 3"></div>
+      <div class="box2"><img src="/images/4.jpg" alt="Project 4"></div>
+    </div>
+  </section>
+
+
+  <section id="contact" class="maincontent" data-aos="fade-up">
+    <h2>Contact Us</h2>
+    <form id="contact-form">
+      <div class="form-group">
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name" placeholder="Your name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" placeholder="Your email" required>
+      </div>
+      <div class="form-group">
+        <label for="message">Message:</label>
+        <textarea id="message" name="message" placeholder="Your message" required></textarea>
+      </div>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+
+  <footer class="footer">
+    <p>&copy; 2024 GreenScape  All rights reserved.</p>
+  </footer>
+  
+<div id="popup" class="popup">
+    <div class="popup-content">
+        <span class="close-popup">&times;</span>
+        <h3>Cost Estimate</h3>
+        <div id="popup-result"></div>
+    </div>
+</div>
+
+
+<script src="js/index.js"></script>
+<script>
+    AOS.init();
+</script>
+</body>
+</html>
